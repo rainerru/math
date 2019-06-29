@@ -1,4 +1,5 @@
-
+//! this is module documentation!
+//! very interesting, yes yes
 
 pub fn integrate_simple ( f: &Fn(f64) -> f64 , a: f64, b: f64, n: u32 ) -> f64
 {
@@ -32,7 +33,8 @@ pub fn integrate_simpson ( f: &Fn(f64) -> f64 , a: f64, b: f64 ) -> f64
 	newintegral
 }
 
-
+/// test blab la
+/// soso
 pub fn integrate_simpson_n ( f: &Fn(f64) -> f64 , a: f64, b: f64, n: u32 ) -> f64
 {
     let mut integral    : f64 = f(a);

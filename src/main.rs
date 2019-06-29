@@ -15,3 +15,5 @@ fn main()
 	println!("The integral of g(x)=x on [0,3] is {}", integrate_simpson( &|x| x, 0.0, 3.0)); 
 
 }
+
+
