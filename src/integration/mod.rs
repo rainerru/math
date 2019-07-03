@@ -1,6 +1,6 @@
-//! this is module documentation!
-//! very interesting, yes yes
+//! This module contains tools for numerical integration on the real line.
 
+/// Uses equidistant points and no weights.
 pub fn integrate_simple ( f: &Fn(f64) -> f64 , a: f64, b: f64, n: u32 ) -> f64
 {
     let mut integral    : f64 = 0.0_f64;
@@ -16,7 +16,7 @@ pub fn integrate_simple ( f: &Fn(f64) -> f64 , a: f64, b: f64, n: u32 ) -> f64
     return integral*(b-a)/(n as f64) as f64;
 }
 
-
+/// Numerical integration using the Simpson formula on subintervals. The starting interval is split up repeadetly (to increase precision) until the calculations yield almost the same results.
 pub fn integrate_simpson ( f: &Fn(f64) -> f64 , a: f64, b: f64 ) -> f64
 {
 	let mut n : u32 = 64;
@@ -33,8 +33,7 @@ pub fn integrate_simpson ( f: &Fn(f64) -> f64 , a: f64, b: f64 ) -> f64
 	newintegral
 }
 
-/// test blab la
-/// soso
+/// Numerical integration using the Simpson formular on subintervals. The starting interval is split up in $n$ intervals.
 pub fn integrate_simpson_n ( f: &Fn(f64) -> f64 , a: f64, b: f64, n: u32 ) -> f64
 {
     let mut integral    : f64 = f(a);
