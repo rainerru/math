@@ -1,4 +1,4 @@
-mod integration;
+pub mod integration;
 
 use integration::*;
 
